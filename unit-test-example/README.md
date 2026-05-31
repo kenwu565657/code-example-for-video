@@ -1,9 +1,14 @@
-# Run by Maven
-```shell
+# Step 0. Run by Maven
+### Mac
+```bash
 ./mvnw compile exec:java -Dexec.mainClass="org.example.Main"
 ```
+### Windows PowerShell
+```ps
+.\mvnw compile exec:java -Dexec.mainClass="org.example.Main"
+```
 
-# Add JUnit Dependency To Project
+# Step 1. Add JUnit Dependency To Project pom.xml
 ```xml
 <dependencies>
     <dependency>
@@ -15,7 +20,16 @@
 </dependencies>
 ```
 
-# Add JUnit Maven Plugin
+# Step 2. Create Unit Test Class Under /test/java
+![Create Test Class In Intellij](/screen_cap_for_readme/create_test_class_in_intellij.png)
+## Create For Main Class
+![Create Test Class For Main](/screen_cap_for_readme/create_test_class_for_Main.png)
+## Create For ProductionDiscountIdentifier Class
+![Create Test Class For ProductionDiscountIdentifier](/screen_cap_for_readme/create_test_class_for_ProductionDiscountIdentifier.png)
+## Expected Folder Structure
+![Expected Folder Structure](/screen_cap_for_readme/test_class_folder_location.png)
+
+# Step 3. Add JUnit Maven Plugin to pom.xml
 ```xml
 <build>
     <plugins>
@@ -28,7 +42,7 @@
 </build>
 ```
 
-# Run Test
+# Step 4. Run Test
 ### Mac
 ```bash
 ./mvnw clean test
@@ -47,7 +61,7 @@
 [INFO] ------------------------------------------------------------------------
 ```
 
-# Add JaCoCo Plugin
+# Step 5. Add JaCoCo Plugin
 ```xml
 <plugin>
     <groupId>org.jacoco</groupId>
@@ -95,10 +109,24 @@
 </plugin>
 ```
 
-## Report Example
+# Step 6. Run Test With Coverage Report
+### Mac
+```bash
+./mvnw clean verify
+```
+### Windows PowerShell
+```ps
+.\mvnw clean verify
+```
+
+### Open index.html
+![Open index.html](/screen_cap_for_readme/open_jacoco_report.png)
+
+### Report Example
 ![JaCoCo Report Example](/screen_cap_for_readme/jacoco_report.png)
 
-# Full Coverage Unit Test Code
+# Step 7. Full Coverage Unit Test Code
+can copy and paste to the two unit test class file
 ```java
 package org.example;
 
@@ -233,3 +261,19 @@ class ProductionDiscountIdentifierTest {
     }
 }
 ```
+
+# Step 8. Run Test With Coverage Report Again
+### Mac
+```bash
+./mvnw clean verify
+```
+### Windows PowerShell
+```ps
+.\mvnw clean verify
+```
+
+### Open index.html
+![Open index.html](/screen_cap_for_readme/open_jacoco_report.png)
+
+### Check Report with Full Coverage
+![Check Report with Full Coverage](/screen_cap_for_readme/jacoco_report_full_coverage.png)
