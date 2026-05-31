@@ -1,6 +1,6 @@
 package org.example;
 
-public class ProductionDiscountIdentifier {
+public class ProductDiscountIdentifier {
     /*
         this function return the discount % of a product.
         it means x % off if the return value is Optional of 10f.

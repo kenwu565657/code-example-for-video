@@ -24,8 +24,8 @@
 ![Create Test Class In Intellij](/screen_cap_for_readme/create_test_class_in_intellij.png)
 ## Create For Main Class
 ![Create Test Class For Main](/screen_cap_for_readme/create_test_class_for_Main.png)
-## Create For ProductionDiscountIdentifier Class
-![Create Test Class For ProductionDiscountIdentifier](/screen_cap_for_readme/create_test_class_for_ProductionDiscountIdentifier.png)
+## Create For ProductDiscountIdentifier Class
+![Create Test Class For ProductDiscountIdentifier](/screen_cap_for_readme/create_test_class_for_ProductDiscountIdentifier.png)
 ## Expected Folder Structure
 ![Expected Folder Structure](/screen_cap_for_readme/test_class_folder_location.png)
 
@@ -211,9 +211,9 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class ProductionDiscountIdentifierTest {
+class ProductDiscountIdentifierTest {
 
-    private final ProductionDiscountIdentifier identifier = new ProductionDiscountIdentifier();
+    private final ProductDiscountIdentifier identifier = new ProductDiscountIdentifier();
 
     @Test
     void identify_WhenProductIsNull_ThrowsEmptyProductException() {
