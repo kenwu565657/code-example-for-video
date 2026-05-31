@@ -37,6 +37,9 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.1.2</version>
+            <configuration>
+                <failIfNoTests>true</failIfNoTests>
+            </configuration>
         </plugin>
     </plugins>
 </build>
